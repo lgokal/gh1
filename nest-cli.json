@@ -27,6 +27,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/mvwrapper/tsconfig.app.json"
       }
+    },
+    "seqgen": {
+      "type": "application",
+      "root": "apps/seqgen",
+      "entryFile": "main",
+      "sourceRoot": "apps/seqgen/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/seqgen/tsconfig.app.json"
+      }
     }
   }
 }
