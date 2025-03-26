@@ -1,6 +1,6 @@
 
 import { SeqgenService } from './seqgen.service';
-import { Controller, Get, Query } from '@nestjs/common';
+import { Controller, Get, Query, Headers } from '@nestjs/common';
 import { ApiOperation, ApiResponse } from '@nestjs/swagger';
 
 @Controller()
@@ -15,7 +15,8 @@ export class SeqgenController {
       @Query('pais') destnCtry: string, // Extract path parameter 'id'
       @Query('cbla') crossBorderType?: string, // Extract query parameter 'includeDetails'
       @Query('prefix') prefix?: string, // Optional query parameter 'version'
+      @Headers('sameReq') sameReq?: string
     ): Promise<string> {
-    return this.seqgenService.generateTrackingNumberWithPrefix(clientId, destnCtry, crossBorderType, prefix);
+    return this.seqgenService.generateTrackingNumberWithPrefix(clientId, destnCtry, crossBorderType, prefix, !!sameReq);
   }
 }
