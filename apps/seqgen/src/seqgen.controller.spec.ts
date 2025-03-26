@@ -16,7 +16,7 @@ describe('SeqgenController', () => {
 
   describe('root', () => {
     it('should return "Hello World!"', () => {
-      expect(seqgenController.getHello()).toBe('Hello World!');
+      expect(seqgenController.getSHFTN("01", "CL")).toBeDefined();
     });
   });
 });

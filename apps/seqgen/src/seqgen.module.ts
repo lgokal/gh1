@@ -6,5 +6,6 @@ import { SeqgenService } from './seqgen.service';
   imports: [],
   controllers: [SeqgenController],
   providers: [SeqgenService],
+  exports: [SeqgenService]
 })
 export class SeqgenModule {}
