@@ -21,7 +21,7 @@ export class SeqgenService {
 
       if (result && result[0] && result[0].tracking_number) {
         const seqNum = result[0].tracking_number.padStart(9,0).toString();
-        const shtn = `DS${prefix}${crossBorderType}${clientPrefix}${seqNum}${destnCtry}`;
+        const shtn = `${prefix}${crossBorderType}${clientPrefix}${seqNum}${destnCtry}`;
         return shtn;
       }
 
