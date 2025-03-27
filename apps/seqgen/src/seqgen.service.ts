@@ -31,6 +31,7 @@ export class SeqgenService {
       }
 
       if (result && result[0] && result[0].tracking_number) {
+        // pad the generated sequence to 9 digits
         const seqNum = result[0].tracking_number.padStart(9,0).toString();
         const shtn = `${prefix}${crossBorderType}${clientPrefix}${seqNum}${destnCtry}`;
         return shtn;
